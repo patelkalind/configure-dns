@@ -58,7 +58,7 @@ Nslookup “mainframe” and notice that it fails (no DNS record)
 
 Go to Windows Administrator Tools in DC-1 and go to DNS. Create a DNS A-record on DC-1 for “mainframe” and have it point to DC-1’s Private IP address. 
 
-From there, go to mydomain.com and then right click for “New Host A-Record”
+From there, go to mydomain.com and then right-click for “New Host A-Record”
 
 <img width="975" height="656" alt="image" src="https://github.com/user-attachments/assets/0762a933-9990-4980-bd9e-7eb1df71afe6" />
  
@@ -74,7 +74,7 @@ Go back to Client-1 and try to ping it. Observe that it works
 
 *Local DNS Cache*
 
-Go back to DC-1 and change mainframe’s record address to 8.8.8.8
+Go back to DC-1 and change the mainframe’s record address to 8.8.8.8
 
 
 <img width="625" height="711" alt="image" src="https://github.com/user-attachments/assets/f919abdf-873b-4cd4-ae86-9f80c30392cf" />
@@ -95,24 +95,45 @@ Observe the local DNS cache (ipconfig /displaydns)
  
 
 Flush the DNS cache (ipconfig /flushdns)
+
+
+<img width="975" height="931" alt="image" src="https://github.com/user-attachments/assets/d10d5cdc-81fa-4c50-a270-e9116a1a354a" />
  
 
 Observe that the cache is empty (ipconfig /displaydns)
+
+
+<img width="975" height="931" alt="image" src="https://github.com/user-attachments/assets/ecc451f2-fc23-441d-9160-0bd71de7c716" />
  
 
-Attempt to ping “mainframe” again. Observe the address of the new record is showing up
- 
+Attempt to ping “mainframe” again. Observe that the address of the new record is showing up
 
-CNAME
+
+<img width="975" height="931" alt="image" src="https://github.com/user-attachments/assets/10adccee-c0b3-4d82-9760-a99c6461c694" />
+
+
+
+*CNAME*
 
 Go back to DC-1 and create a CNAME record within the DNS Manager that points the host “search” to www.google.com
+
+
+<img width="625" height="711" alt="image" src="https://github.com/user-attachments/assets/6bd4ad64-e9d6-42a3-adcc-fc80e2407c53" />
  
 
-Go back to Client-1 and attempt to ping “search”, observe the results of the CNAME record
+
+Go back to Client-1 and attempt to ping “search”; observe the results of the CNAME record
+
+
+<img width="975" height="931" alt="image" src="https://github.com/user-attachments/assets/bde32241-5842-4125-b3b7-11491021e3a5" />
  
+
 
 On Client-1, nslookup “search”, observe the results of the CNAME record. This will reveal the ipv6 and ipv4 results
- 
+
+<img width="975" height="931" alt="image" src="https://github.com/user-attachments/assets/bc0c3d38-5f35-4a8f-a993-5918933845dc" />
+
+
 
 This officially wraps up Part 2 of this tutorial. Part 3 will conclude the Active Directory series on Network File Shares and Permissions
 
