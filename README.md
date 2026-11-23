@@ -1,5 +1,5 @@
 <p align="center">
-<img src="<img width="358" height="358" alt="image" src="https://github.com/user-attachments/assets/5c62a3a3-f122-46fc-b746-b03c39b85a39" />
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE8PstcPGgZTuEczosANbV4nyHV3wakk2yB2XObdv0Dg&s=10" />
 </p>
 
 <h1>On-premises Active Directory Deployed in the Cloud (Azure) - Part 2 (DNS)</h1>
